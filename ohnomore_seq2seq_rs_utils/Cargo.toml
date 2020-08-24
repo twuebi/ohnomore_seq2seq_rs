@@ -1,0 +1,12 @@
+[package]
+name = "ohnomore_seq2seq_rs_utils"
+version = "0.1.0"
+authors = ["tobias <tobias.puetz@student.uni-tuebingen.de>"]
+
+[dependencies]
+ohnomore_seq2seq_rs = { path = "../ohnomore_seq2seq_rs", version = "0.1.0"}
+clap = "2.32.0"
+stdinout = "0.4"
+indicatif = "0.9.0"
+conllx = {git = "https://github.com/danieldk/conllx-rs"}
+lru-cache = "0.1.1"

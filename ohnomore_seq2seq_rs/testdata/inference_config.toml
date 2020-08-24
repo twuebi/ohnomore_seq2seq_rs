@@ -1,0 +1,17 @@
+max_morph_tags = 5
+pad_symbol = "<PAD>"
+morph_feats = [ "<PAD>", "<UNK>", "case:accusative", "number:singular", "gender:feminine", "morph:asf", "case:nominative", "morph:nsf", "gender:masculine", "morph:asm", "case:genitive", "number:plural", "morph:gpm", "morph:npm", "morph:nsm", "case:dative", "gender:neuter", "morph:dsn", "morph:asn", "morph:dsf", "gender:underspecified", "morph:gp*", "morph:dsm", "morph:dpf", "morph:apm", "morph:apf", "morph:gsm", "morph:npf", "morph:dpm", "morph:gsf", "morph:nsn", "morph:npn", "morph:gpf", "morph:dpn", "morph:apn", "morph:dp*", "morph:gsn", "morph:np*", "morph:gpn", "morph:ds*", "number:underspecified", "morph:n*n",]
+
+[ops.input]
+input = "pred/model/inputs"
+input_lengths = "pred/model/input_lengths"
+morph = "pred/model/morph_input"
+pos = "pred/model/pos_input"
+
+[ops.output]
+ids = "pred/model/decoder/decoder/transpose_1"
+chars = "pred/model/hash_table_Lookup"
+seq_length = "pred/model/decoder/decoder/while/Exit_13"
+
+[ops.init_ops]
+table = "init_tables"

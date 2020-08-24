@@ -1,0 +1,55 @@
+title = 'config'
+
+patience = 150
+batch_size = 2048
+# one of ['use_all', 'discard_last', 'smaller_last']
+batching_policy = 'use_all'
+# one of ['linear', 'random_rebatch', 'shuffle_batches']
+sampling_strategy = 'random'
+
+save_path = 'save_dir/'
+
+max_timesteps = 50
+# one of ['split','suffix']
+truncate = 'split'
+
+pad_sym = '<PAD>'
+start_sym = '<BOW>'
+end_sym = '<EOW>'
+
+gpu_frac = 1.0
+
+char_embedding_size = 100
+pos_embedding_size = 50
+morph_embedding_size = 30
+
+# one of ['adam', 'sgd']
+optimizer = 'adam'
+learning_rate = 0.003
+max_gradient_norm = 5
+
+# one of ['lstm', 'gru']
+cell_type = 'lstm'
+layers = 1
+hsize = 300
+
+# one of ['uni','bi']
+encoder = 'uni'
+
+# lstm
+encoder_cellclip = 6
+decoder_cellclip = 6
+
+# attention
+attention = true
+# one of ['luong', 'bahdanau','luong_monotonic', 'bahdanau_monotonic']
+attention_kind = 'luong_monotonic'
+# only applies to bahdanau attention
+attention_size = 64
+
+input_dropout = 1.0
+encoder_dropout = 0.5
+decoder_dropout = 0.5
+projection_dropout = 1.0
+
+max_morph_tags = 5

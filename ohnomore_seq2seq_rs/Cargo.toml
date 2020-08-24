@@ -1,0 +1,13 @@
+[package]
+name = "ohnomore_seq2seq_rs"
+version = "0.1.0"
+authors = ["tobias <tobias.puetz@student.uni-tuebingen.de>"]
+
+[dependencies]
+protobuf = "2.0.4"
+conllx = {git = "https://github.com/danieldk/conllx-rs"}
+fasthash = "0.2"
+serde = "1.0.71"
+stdinout = "0.4"
+tensorflow = "0.10.0"
+toml = "0.4.6"

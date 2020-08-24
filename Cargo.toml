@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+  "ohnomore_seq2seq_rs",
+  "ohnomore_seq2seq_rs_utils",
+]

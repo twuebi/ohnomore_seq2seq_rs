@@ -1,0 +1,17 @@
+max_morph_tags = 5
+morph_feats = ["A:A","B:B","A:B","B:B","B:A"]
+pad_symbol = "<PAD>"
+
+[ops.input]
+input = "pred/model/inputs"
+input_lengths = "pred/model/input_lengths"
+morph = "pred/model/morph_input"
+pos = "pred/model/pos_input"
+
+[ops.output]
+ids = "pred/model/decoder/decoder/transpose_1"
+chars = "pred/model/hash_table_Lookup"
+seq_length = "pred/model/decoder/decoder/while/Exit_13"
+
+[ops.init_ops]
+table = "init_tables"
